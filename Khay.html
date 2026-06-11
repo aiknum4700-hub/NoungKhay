@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffb6c1;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.box {
+    text-align: center;
+    width: 90%;
+}
+
+h1 {
+    color: white;
+    font-size: 35px;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 22px;
+    border: none;
+    border-radius: 30px;
+    margin: 15px;
+}
+
+#yes {
+    background: #ff3366;
+    color: white;
+}
+
+#no {
+    background: white;
+    color: #555;
+    position: absolute;
+}
+
+.heart {
+    font-size: 50px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="heart">❤️</div>
+
+<h1>Do you love me?</h1>
+
+<button id="yes" onclick="yesClick()">
+Yes 💕
+</button>
+
+<button id="no" ontouchstart="moveNo()" onmouseover="moveNo()">
+No 😢
+</button>
+
+</div>
+
+
+<script>
+
+function moveNo(){
+
+let button = document.getElementById("no");
+
+let x = Math.random() * (window.innerWidth - 120);
+let y = Math.random() * (window.innerHeight - 80);
+
+button.style.left = x + "px";
+button.style.top = y + "px";
+
+}
+
+
+function yesClick(){
+
+document.body.innerHTML = `
+
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffb6c1;
+text-align:center;
+font-family:Arial;
+padding:20px;
+">
+
+<h1 style="color:white;font-size:35px;">
+I already know you will say yes ❤️<br><br>
+I love you 💕
+</h1>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
